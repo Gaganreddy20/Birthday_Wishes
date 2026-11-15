@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0a0a0a">
+<title>Birthday Experience | Sandeep Reddy</title>
+<link rel="stylesheet" href="styles/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+<!-- 1. LOCK SCREEN -->
+<section class="screen active" id="lockScreen">
+  <div class="ambient">
+    <video autoplay muted loop id="bg-video" src="assets/Lock.mp4"></video>
+  </div>
+
+  <div class="lock-content">
+    <div class="brand heading">PRIVATE CELEBRATION / 2026</div>
+
+    <div class="vault" id="vault">
+      <div class="lock-icon" id="lockIcon">◈</div>
+      <h2>SECURE ACCESS</h2>
+      <p>ENTER THE 4-DIGIT CODE</p>
+
+      <div class="dots" id="dots">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+
+      <div class="keypad" id="keypad">
+        <button class="key" data-key="1">1</button>
+        <button class="key" data-key="2">2</button>
+        <button class="key" data-key="3">3</button>
+        <button class="key" data-key="4">4</button>
+        <button class="key" data-key="5">5</button>
+        <button class="key" data-key="6">6</button>
+        <button class="key" data-key="7">7</button>
+        <button class="key" data-key="8">8</button>
+        <button class="key" data-key="9">9</button>
+        <button class="key special" data-key="clear">DELETE</button>
+        <button class="key" data-key="0">0</button>
+        <button class="key special" data-key="enter">ENTER</button>
+      </div>
+
+      <div class="status" id="status"></div>
+    </div>
+
+    <div class="hint">HINT: YOUR BIRTH DATE (1611)</div>
+  </div>
+</section>
+
+<!-- 2. LOADING SCREEN -->
+<section class="screen" id="loadingScreen">
+  <div class="ambient"></div>
+
+  <div class="loading-content">
+    <div class="heading">INITIALIZING BIRTHDAY EXPERIENCE</div>
+
+    <div class="loading-track">
+      <div class="loading-bar" id="loadingBar"></div>
+    </div>
+
+    <div class="percent" id="percent">00%</div>
+
+    <h1 class="reveal-title" id="revealTitle"></h1>
+  </div>
+</section>
+
+<!-- 3. FIREWORKS -->
+<section class="screen" id="fireworksScreen">
+
+  <video class="firework-video" id="fireworksvideo" autoplay muted loop playsinline>
+    <source src="assets/Fireworks.mp4" type="video/mp4">
+  </video>
+
+  <canvas id="fireworksCanvas"></canvas>
+
+  <div class="firework-title">
+    <h1>LET'S CELEBRATE</h1>
+    <p>ANOTHER YEAR. ANOTHER LEGEND.</p>
+  </div>
+
+  <button class="main-btn" id="letterNextBtn">
+    OPEN YOUR LETTER →
+  </button>
+
+  
+
+</section>
+
+<!-- 4. LETTER -->
+<section class="screen" id="letterScreen">
+  <div class="ambient">
+    <video autoplay muted loop src="assets/BMW_M3.mp4"></video>
+  </div>
+
+  <div class="letter-content">
+    <div class="section-label">A MESSAGE FOR YOU</div>
+
+    <div class="letter-card">
+      <h2>TO MY BROTHER.</h2>
+      <div class="letter-text" id="letterText"></div>
+      <span class="cursor" id="cursor">|</span>
+
+      <button class="main-btn" id="galleryBtn">
+        CLICK HERE →
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- 5. GALLERY -->
+<section class="screen gallery-screen" id="galleryScreen">
+  <div class="ambient">
+    <video autoplay muted loop src="assets/BMW_LOGO.mp4"></video>
+  </div>
+
+  <div class="gallery-header">
+    <div class="section-label">THE GOOD TIMES</div>
+    <h1>MEMORIES & MACHINES.</h1>
+    <p>GOOD PEOPLE. GREAT MOMENTS. UNFORGETTABLE RIDES.</p>
+  </div>
+
+  <div class="marquee">
+    <div class="marquee-track" id="trackOne"></div>
+  </div>
+
+  <div class="marquee reverse">
+    <div class="marquee-track" id="trackTwo"></div>
+  </div>
+
+  <div class="closing">
+    <h2 id="closingText"></h2>
+    <p>STAY BOLD. STAY LEGENDARY.</p>
+  </div>
+</section>
+
+<audio id="fireworkSound" src="assets/KALYANI.mp3" autoplay loop></audio>
+
+<script src="scripts/script.js"></script>
+
+</body>
+</html>
