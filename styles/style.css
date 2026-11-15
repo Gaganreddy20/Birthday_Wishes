@@ -480,7 +480,7 @@ button {
   display: flex;
   width: max-content;
   gap: 20px;
-  animation: scroll 120s linear infinite;
+  animation: scroll 300s linear infinite;
 }
 
 .marquee.reverse .marquee-track {
@@ -599,3 +599,18 @@ button {
 }
 .photo-card .fallback { z-index: 0; }
 .photo-card img { position: relative; z-index: 1; }
+
+
+/* Slow gallery scroll (overrides everything above) */
+.marquee .marquee-track {
+  animation: marqueeSlow 120s linear infinite !important;
+}
+
+.marquee.reverse .marquee-track {
+  animation: marqueeSlow 140s linear infinite reverse !important;
+}
+
+@keyframes marqueeSlow {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
